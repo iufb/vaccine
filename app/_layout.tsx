@@ -1,4 +1,5 @@
 import { useFonts } from 'expo-font';
+import { Rubik_900Black } from '@expo-google-fonts/rubik';
 import { SplashScreen, Stack } from 'expo-router';
 import React, { useEffect } from 'react';
 import '~/i18n';
@@ -15,6 +16,7 @@ export const unstable_settings = {
 
 export default function RootLayout() {
   const [loaded] = useFonts({
+    Rubik_900Black,
     Inter: require('@tamagui/font-inter/otf/Inter-Medium.otf'),
     InterBold: require('@tamagui/font-inter/otf/Inter-Bold.otf'),
   });
