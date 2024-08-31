@@ -20,17 +20,17 @@ export default function Home() {
           <Card
             img={require('../../assets/home-bg-1.jpg')}
             title={t('home.links.1')}
-            link="/home/vvedenie"
+            link="/home/Introdution"
           />
           <Card
             img={require('../../assets/home-bg-2.jpg')}
             title={t('home.links.2')}
-            link="/home/opred"
+            link="/home/Definitions"
           />
           <Card
             img={require('../../assets/home-bg-3.jpg')}
             title={t('home.links.3')}
-            link="/home/sok"
+            link="/home/Abbr"
           />
         </View>
         <Image style={{ alignItems: 'flex-end' }} source={require('../../assets/1.png')} />

@@ -1,20 +1,13 @@
-import { Stack } from 'expo-router';
-import { Trans, useTranslation } from 'react-i18next';
-import { Image, Text } from 'react-native';
-import { H2, Paragraph, ScrollView, View } from 'tamagui';
 import * as Device from 'expo-device';
-export default function Vvedenie() {
+import { Trans, useTranslation } from 'react-i18next';
+import { Text } from 'react-native';
+import { H2, Paragraph, ScrollView } from 'tamagui';
+import { StackScreen } from '~/components/StackScreen';
+export default function Introdution() {
   const { t } = useTranslation();
   return (
     <>
-      <Stack.Screen
-        options={{
-          headerTitle: t('home.content.1.title'),
-          headerTitleAlign: 'center',
-          headerBackTitle: undefined, // Hide the back button text
-          headerBackTitleVisible: false, // Ensure back button text is hidden
-        }}
-      />
+      <StackScreen title={t('home.content.1.title')} />
       <ScrollView
         contentContainerStyle={{ paddingVertical: 10 }}
         style={{ backgroundColor: 'white' }}>

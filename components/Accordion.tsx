@@ -1,4 +1,5 @@
-import React, { ReactNode } from 'react';
+import { FontAwesome } from '@expo/vector-icons';
+import React, { ReactNode, useEffect } from 'react';
 import {
   StyleSheet,
   View,
@@ -22,7 +23,15 @@ export const Accordion = ({ title, children }: { title: string; children: ReactN
   const open = useSharedValue(false);
   const onPress = () => {
     open.value = !open.value;
+    rotation.value = withTiming(open.value ? 0 : 180, { duration: 400 });
   };
+  const rotation = useSharedValue(0); // Rotation value in degrees
+
+  const animatedStyle = useAnimatedStyle(() => {
+    return {
+      transform: [{ rotate: `${rotation.value}deg` }],
+    };
+  });
   return (
     <SafeAreaView style={styles.container}>
       <View>
@@ -30,10 +39,13 @@ export const Accordion = ({ title, children }: { title: string; children: ReactN
           <Text fontWeight={900} color={'white'} fontSize={'$6'} style={styles.btnText}>
             {title}
           </Text>
+          <Animated.View style={[animatedStyle]}>
+            <FontAwesome size={22} color={'white'} name="chevron-down" />
+          </Animated.View>
         </TouchableOpacity>
       </View>
       <View style={styles.content}>
-        <AccordionItem duration={150} isExpanded={open} viewKey="Accordion">
+        <AccordionItem isExpanded={open} viewKey="Accordion">
           {children}
         </AccordionItem>
       </View>
@@ -62,13 +74,14 @@ function AccordionItem({
   );
   const bodyStyle = useAnimatedStyle(() => ({
     height: derivedHeight.value,
+    overflow: 'hidden',
   }));
 
   return (
     <Animated.View key={`accordionItem_${viewKey}`} style={[styles.animatedView, bodyStyle, style]}>
       <View
         onLayout={(e) => {
-          height.value = e.nativeEvent.layout.height;
+          height.value = Math.floor(e.nativeEvent.layout.height);
         }}
         style={styles.wrapper}>
         {children}
@@ -85,6 +98,9 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   buttonContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
     paddingHorizontal: 15,
     paddingVertical: 10,
     backgroundColor: '#24C7C7',
@@ -101,13 +117,18 @@ const styles = StyleSheet.create({
     width: 200,
   },
   wrapper: {
-    width: '100%',
     position: 'absolute',
     display: 'flex',
+    borderRadius: 10,
+    paddingVertical: 10,
+    left: 10,
+    right: 10,
     alignItems: 'center',
+    backgroundColor: '#e2e8f0',
   },
   animatedView: {
     width: '100%',
+    justifyContent: 'center',
     overflow: 'hidden',
   },
 });

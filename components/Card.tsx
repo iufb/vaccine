@@ -1,16 +1,19 @@
 import { Href, Link } from 'expo-router';
 import { useTranslation } from 'react-i18next';
+import { StyleProp, ViewProps } from 'react-native';
 import type { CardProps } from 'tamagui';
-import { Button, H5, Card as TCard, XStack, Image, View } from 'tamagui';
+import { Button, H5, Image, Card as TCard, View, XStack } from 'tamagui';
 interface Props extends CardProps {
   title: string;
   link: Href<string>;
   img?: string;
+  style?: StyleProp<ViewProps>;
 }
-export function Card({ title, img, link, ...props }: Props) {
+export function Card({ title, img, style, link, ...props }: Props) {
   const { t } = useTranslation();
   return (
     <TCard
+      style={style}
       animation={'bouncy'}
       scale={0.9}
       hoverStyle={{ scale: 0.925 }}
