@@ -27,7 +27,9 @@ export default function Sokrasheniya() {
         style={{ backgroundColor: 'white' }}>
         {data.map((item: { key: string; description: string }) => (
           <Accordion key={item.key} title={item.key}>
-            <Text>{item.description}</Text>
+            <Paragraph color={'$gray8'} size={'$6'}>
+              {item.description}
+            </Paragraph>
           </Accordion>
         ))}
       </ScrollView>

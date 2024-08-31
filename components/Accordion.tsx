@@ -1,76 +1,113 @@
-import React, { ReactNode, useEffect, useRef, useState } from 'react';
-import { withSSR } from 'react-i18next';
-import { View, Text, TouchableOpacity, StyleSheet, LayoutChangeEvent } from 'react-native';
-import Animated, { useSharedValue, useAnimatedStyle, withTiming } from 'react-native-reanimated';
-import { H3, Paragraph } from 'tamagui';
+import React, { ReactNode } from 'react';
+import {
+  StyleSheet,
+  View,
+  Button,
+  SafeAreaView,
+  ViewStyle,
+  StyleProp,
+  TouchableOpacity,
+} from 'react-native';
+import Animated, {
+  SharedValue,
+  StyleProps,
+  useAnimatedStyle,
+  useDerivedValue,
+  useSharedValue,
+  withTiming,
+} from 'react-native-reanimated';
+import { Paragraph, Text } from 'tamagui';
 
 export const Accordion = ({ title, children }: { title: string; children: ReactNode }) => {
-  const [expanded, setExpanded] = useState(false);
-  const height = useSharedValue(0);
-  const opacity = useSharedValue(0);
-  const [childHeight, setChildHeight] = useState(0);
-  const [isInitialized, setIsInitialized] = useState(false);
-
-  const onLayout = (event: LayoutChangeEvent) => {
-    const { height: layoutHeight } = event.nativeEvent.layout;
-    if (childHeight === 0) {
-      setChildHeight(layoutHeight);
-      setIsInitialized(true);
-    }
+  const open = useSharedValue(false);
+  const onPress = () => {
+    open.value = !open.value;
   };
-
-  useEffect(() => {
-    if (!isInitialized) return;
-
-    if (expanded) {
-      height.value = withTiming(childHeight, { duration: 300 });
-      opacity.value = withTiming(1, { duration: 1500 });
-    } else {
-      height.value = withTiming(0, { duration: 300 });
-      opacity.value = withTiming(0, { duration: 300 });
-    }
-  }, [expanded, childHeight, height, opacity, isInitialized]);
-
-  const toggleAccordion = () => {
-    setExpanded(!expanded);
-  };
-
-  const animatedStyle = useAnimatedStyle(() => {
-    return {
-      height: height.value,
-      opacity: opacity.value,
-    };
-  });
-
   return (
-    <View
-      style={[
-        styles.container,
-        !expanded && { borderBottomWidth: 2, borderBottomColor: '#129595' },
-      ]}>
-      <TouchableOpacity onPress={toggleAccordion} style={styles.header}>
-        <H3 size={'$8'} fontWeight={900}>
-          {title}
-        </H3>
-      </TouchableOpacity>
-      <Animated.View
-        onLayout={onLayout}
-        style={[animatedStyle, childHeight === 0 && { height: 'auto', padding: 0 }]}>
-        <Text style={styles.body}>{children}</Text>
-      </Animated.View>
-    </View>
+    <SafeAreaView style={styles.container}>
+      <View>
+        <TouchableOpacity style={styles.buttonContainer} onPress={onPress}>
+          <Text fontWeight={900} color={'white'} fontSize={'$6'} style={styles.btnText}>
+            {title}
+          </Text>
+        </TouchableOpacity>
+      </View>
+      <View style={styles.content}>
+        <AccordionItem duration={150} isExpanded={open} viewKey="Accordion">
+          {children}
+        </AccordionItem>
+      </View>
+    </SafeAreaView>
   );
 };
+function AccordionItem({
+  isExpanded,
+  children,
+  viewKey,
+  style,
+  duration = 200,
+}: {
+  isExpanded: SharedValue<boolean>;
+  children: ReactNode;
+  viewKey: string;
+  style?: StyleProp<ViewStyle>;
+  duration?: number;
+}) {
+  const height = useSharedValue(0);
+
+  const derivedHeight = useDerivedValue(() =>
+    withTiming(height.value * Number(isExpanded.value), {
+      duration,
+    })
+  );
+  const bodyStyle = useAnimatedStyle(() => ({
+    height: derivedHeight.value,
+  }));
+
+  return (
+    <Animated.View key={`accordionItem_${viewKey}`} style={[styles.animatedView, bodyStyle, style]}>
+      <View
+        onLayout={(e) => {
+          height.value = e.nativeEvent.layout.height;
+        }}
+        style={styles.wrapper}>
+        {children}
+      </View>
+    </Animated.View>
+  );
+}
+
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
+    display: 'flex',
+    gap: 10,
     marginBottom: 10,
   },
-  header: {
-    padding: 10,
+  buttonContainer: {
+    paddingHorizontal: 15,
+    paddingVertical: 10,
     backgroundColor: '#24C7C7',
   },
-  body: {
-    paddingHorizontal: 10,
-    fontSize: 20,
+  btnText: {
+    textAlign: 'left',
+  },
+  content: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  parent: {
+    width: 200,
+  },
+  wrapper: {
+    width: '100%',
+    position: 'absolute',
+    display: 'flex',
+    alignItems: 'center',
+  },
+  animatedView: {
+    width: '100%',
+    overflow: 'hidden',
   },
 });
