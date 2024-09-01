@@ -1,5 +1,13 @@
 import { useFonts } from 'expo-font';
-import { Rubik_900Black } from '@expo-google-fonts/rubik';
+import {
+  Rubik_900Black,
+  Rubik_300Light,
+  Rubik_400Regular,
+  Rubik_600SemiBold,
+  Rubik_300Light_Italic,
+  Rubik_400Regular_Italic,
+  Rubik_600SemiBold_Italic,
+} from '@expo-google-fonts/rubik';
 import { SplashScreen, Stack } from 'expo-router';
 import React, { useEffect } from 'react';
 import '~/i18n';
@@ -17,6 +25,12 @@ export const unstable_settings = {
 export default function RootLayout() {
   const [loaded] = useFonts({
     Rubik_900Black,
+    Rubik_300Light,
+    Rubik_400Regular,
+    Rubik_600SemiBold,
+    Rubik_300Light_Italic,
+    Rubik_400Regular_Italic,
+    Rubik_600SemiBold_Italic,
     Inter: require('@tamagui/font-inter/otf/Inter-Medium.otf'),
     InterBold: require('@tamagui/font-inter/otf/Inter-Bold.otf'),
   });

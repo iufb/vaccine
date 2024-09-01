@@ -22,6 +22,7 @@ export default function Characteristics() {
         }}>
         {links.map((link, idx) => (
           <Link
+            key={link}
             style={{ borderRadius: 10 }}
             name={link}
             href={`/info/deseases/${link}` as Href<string>}

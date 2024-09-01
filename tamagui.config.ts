@@ -3,7 +3,15 @@ import { createInterFont } from '@tamagui/font-inter';
 import { createMedia } from '@tamagui/react-native-media-driver';
 import { shorthands } from '@tamagui/shorthands';
 import { themes, tokens } from '@tamagui/themes';
-import { createTamagui, styled, SizableText, H1, YStack, Button as ButtonTamagui } from 'tamagui';
+import {
+  createTamagui,
+  styled,
+  SizableText,
+  H1,
+  YStack,
+  Button as ButtonTamagui,
+  createFont,
+} from 'tamagui';
 
 const animations = createAnimations({
   bouncy: {
@@ -28,7 +36,6 @@ const animations = createAnimations({
 const headingFont = createInterFont();
 
 const bodyFont = createInterFont();
-
 export const Container = styled(YStack, {
   flex: 1,
   padding: 24,
@@ -83,7 +90,7 @@ const config = createTamagui({
       text: 'black',
     },
   },
-  defaultFont: 'body',
+  defaultFont: 'Rubick',
   animations,
   shouldAddPrefersColorThemes: true,
   themeClassNameOnRoot: true,

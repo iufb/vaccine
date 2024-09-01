@@ -2,6 +2,7 @@ import * as Device from 'expo-device';
 import { Trans, useTranslation } from 'react-i18next';
 import { Text } from 'react-native';
 import { H2, Paragraph, ScrollView } from 'tamagui';
+import { P } from '~/components/P';
 import { StackScreen } from '~/components/StackScreen';
 export default function Introdution() {
   const { t } = useTranslation();
@@ -15,12 +16,7 @@ export default function Introdution() {
           i18nKey={'home.content.1.info'}
           components={{
             h: <H2 style={{ textAlign: 'center' }} color={'black'}></H2>,
-            p: (
-              <Paragraph
-                size={Device.deviceType === Device.DeviceType.TABLET ? '$8' : '$6'}
-                style={{ paddingHorizontal: 20, textAlign: 'justify' }}
-                color={'$gray1Dark'}></Paragraph>
-            ),
+            p: <P></P>,
             red: <Text style={{ paddingLeft: 20 }}></Text>,
           }}
         />

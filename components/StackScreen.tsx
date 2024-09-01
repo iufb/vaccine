@@ -1,11 +1,23 @@
 import { Stack } from 'expo-router';
+import { Text } from 'react-native';
 
 export const StackScreen = ({ title }: { title: string }) => {
   return (
     <Stack.Screen
       options={{
-        title,
         headerTitleAlign: 'center',
+        headerTitle: () => (
+          <Text
+            ellipsizeMode="tail"
+            style={{
+              color: '#111827',
+              fontSize: 20,
+              fontFamily: 'Rubik',
+            }}
+            numberOfLines={1}>
+            {title}
+          </Text>
+        ),
         headerBackTitleVisible: false,
       }}
     />

@@ -1,5 +1,6 @@
 import { Stack } from 'expo-router';
 import { Paragraph, ScrollView, Square, Text, View } from 'tamagui';
+import { Text as TText } from 'react-native';
 import * as Device from 'expo-device';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
@@ -22,9 +23,9 @@ export default function Sokrasheniya() {
         <View paddingVertical={10} marginBottom={30}>
           {data.map((item: { key: string; description: string }) => (
             <Accordion key={item.key} title={item.key}>
-              <Paragraph color={'$gray5'} size={'$6'}>
-                {item.description}
-              </Paragraph>
+              {/* <Paragraph color={'$gray5'} size={'$6'}> */}
+              <TText style={{ fontFamily: 'Rubik' }}>{item.description}</TText>
+              {/* </Paragraph> */}
             </Accordion>
           ))}
         </View>
