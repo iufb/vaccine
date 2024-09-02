@@ -1,8 +1,7 @@
-import { Link, Tabs } from 'expo-router';
+import { Tabs } from 'expo-router';
 
-import { HeaderButton } from '../../components/HeaderButton';
-import { TabBarIcon } from '../../components/TabBarIcon';
 import { useTranslation } from 'react-i18next';
+import { TabBarIcon } from '../../components/TabBarIcon';
 
 export default function TabLayout() {
   const { t } = useTranslation();

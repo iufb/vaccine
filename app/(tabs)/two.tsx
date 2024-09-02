@@ -1,10 +1,8 @@
-import { Href, Stack } from 'expo-router';
+import { Href } from 'expo-router';
 import { useTranslation } from 'react-i18next';
-import { StyleSheet } from 'react-native';
-import { View } from 'tamagui';
+import { StyleSheet, View } from 'react-native';
 import { Link } from '~/components/Link';
 
-import { ScreenContent } from '~/components/ScreenContent';
 import { StackScreen } from '~/components/StackScreen';
 
 const imageMap = {
@@ -19,7 +17,14 @@ export default function Infomation() {
   return (
     <>
       <StackScreen title={t('info.title')} />
-      <View gap={10} paddingLeft={20} paddingVertical={10} backgroundColor={'white'} mt={10}>
+      <View
+        style={{
+          gap: 10,
+          paddingLeft: 10,
+          paddingVertical: 10,
+          backgroundColor: 'white',
+          marginTop: 10,
+        }}>
         {links.map(({ href, name }, idx) => {
           return (
             <Link

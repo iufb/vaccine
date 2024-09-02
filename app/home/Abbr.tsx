@@ -1,13 +1,12 @@
 import { Stack } from 'expo-router';
-import { Paragraph, ScrollView, Square, Text, View } from 'tamagui';
-import { Text as TText } from 'react-native';
+import { ScrollView, Text, View } from 'react-native';
 import * as Device from 'expo-device';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Accordion } from '~/components/Accordion';
 import { StackScreen } from '~/components/StackScreen';
 
-export default function Sokrasheniya() {
+export default function Abbr() {
   const { t } = useTranslation();
   const data = t('home.content.3.data', { returnObjects: true }) as Array<{
     key: string;
@@ -20,12 +19,10 @@ export default function Sokrasheniya() {
       <ScrollView
         contentContainerStyle={{ paddingVertical: 10 }}
         style={{ backgroundColor: 'white' }}>
-        <View paddingVertical={10} marginBottom={30}>
+        <View style={{ paddingVertical: 10, marginBottom: 30 }}>
           {data.map((item: { key: string; description: string }) => (
             <Accordion key={item.key} title={item.key}>
-              {/* <Paragraph color={'$gray5'} size={'$6'}> */}
-              <TText style={{ fontFamily: 'Rubik' }}>{item.description}</TText>
-              {/* </Paragraph> */}
+              <Text style={{ fontFamily: 'Rubik_400Regular' }}>{item.description}</Text>
             </Accordion>
           ))}
         </View>

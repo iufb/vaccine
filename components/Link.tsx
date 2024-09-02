@@ -1,12 +1,19 @@
 import { FontAwesome } from '@expo/vector-icons';
 import { Link as ExpoLink, Href, useRouter } from 'expo-router';
-import { StyleProp, TouchableOpacity, View, ViewStyle } from 'react-native';
-import { Image, Text } from 'tamagui';
+import {
+  Image,
+  ImageSourcePropType,
+  StyleProp,
+  Text,
+  TouchableOpacity,
+  View,
+  ViewStyle,
+} from 'react-native';
 interface LinkProps {
   href: Href<string>;
   name: string;
   style?: StyleProp<ViewStyle>;
-  img: string;
+  img: ImageSourcePropType;
 }
 export const Link = ({ href, img, name, style }: LinkProps) => {
   const router = useRouter();
@@ -26,10 +33,8 @@ export const Link = ({ href, img, name, style }: LinkProps) => {
           style,
         ]}>
         <View style={{ flexDirection: 'row', gap: 10, alignItems: 'center' }}>
-          <Image source={{ width: 32, height: 32, uri: img }} />
-          <Text fontSize={'$7'} color={'$gray1Dark'} maxWidth={300}>
-            {name}
-          </Text>
+          <Image source={img} style={{ width: 32, height: 32 }} />
+          <Text style={{ fontSize: 24, maxWidth: 300, color: '#1f2937' }}>{name}</Text>
         </View>
         <FontAwesome name="chevron-right" size={20} color={'gray'} />
       </View>

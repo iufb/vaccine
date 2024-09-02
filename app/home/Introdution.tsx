@@ -1,7 +1,6 @@
 import * as Device from 'expo-device';
 import { Trans, useTranslation } from 'react-i18next';
-import { Text } from 'react-native';
-import { H2, Paragraph, ScrollView } from 'tamagui';
+import { ScrollView, Text } from 'react-native';
 import { P } from '~/components/P';
 import { StackScreen } from '~/components/StackScreen';
 export default function Introdution() {
@@ -15,9 +14,7 @@ export default function Introdution() {
         <Trans
           i18nKey={'home.content.1.info'}
           components={{
-            h: <H2 style={{ textAlign: 'center' }} color={'black'}></H2>,
             p: <P></P>,
-            red: <Text style={{ paddingLeft: 20 }}></Text>,
           }}
         />
       </ScrollView>

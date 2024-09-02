@@ -8,6 +8,7 @@ import {
   ViewStyle,
   StyleProp,
   TouchableOpacity,
+  Text,
 } from 'react-native';
 import Animated, {
   SharedValue,
@@ -17,7 +18,6 @@ import Animated, {
   useSharedValue,
   withTiming,
 } from 'react-native-reanimated';
-import { Paragraph, Text } from 'tamagui';
 
 export const Accordion = ({ title, children }: { title: string; children: ReactNode }) => {
   const open = useSharedValue(false);
@@ -36,9 +36,7 @@ export const Accordion = ({ title, children }: { title: string; children: ReactN
     <SafeAreaView style={styles.container}>
       <View>
         <TouchableOpacity style={styles.buttonContainer} onPress={onPress}>
-          <Text fontWeight={900} color={'white'} fontSize={'$6'} style={styles.btnText}>
-            {title}
-          </Text>
+          <Text style={styles.btnText}>{title}</Text>
           <Animated.View style={[animatedStyle]}>
             <FontAwesome size={22} color={'white'} name="chevron-down" />
           </Animated.View>
@@ -81,7 +79,7 @@ function AccordionItem({
     <Animated.View key={`accordionItem_${viewKey}`} style={[styles.animatedView, bodyStyle, style]}>
       <View
         onLayout={(e) => {
-          height.value = Math.floor(e.nativeEvent.layout.height);
+          height.value = Math.ceil(e.nativeEvent.layout.height);
         }}
         style={styles.wrapper}>
         {children}
@@ -107,6 +105,9 @@ const styles = StyleSheet.create({
   },
   btnText: {
     textAlign: 'left',
+    color: 'white',
+    fontWeight: '900',
+    fontFamily: 'Rubik',
   },
   content: {
     flex: 1,

@@ -1,8 +1,6 @@
-import { Href, Stack } from 'expo-router';
+import { Href } from 'expo-router';
 import { useTranslation } from 'react-i18next';
-import { Dimensions } from 'react-native';
-import { Text, View, ScrollView } from 'tamagui';
-import { Card } from '~/components/Card';
+import { ScrollView } from 'react-native';
 import { Link } from '~/components/Link';
 import { StackScreen } from '~/components/StackScreen';
 

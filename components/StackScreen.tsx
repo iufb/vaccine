@@ -12,7 +12,7 @@ export const StackScreen = ({ title }: { title: string }) => {
             style={{
               color: '#111827',
               fontSize: 20,
-              fontFamily: 'Rubik',
+              fontFamily: 'Rubik_400Regular',
             }}
             numberOfLines={1}>
             {title}

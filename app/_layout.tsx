@@ -1,5 +1,5 @@
-import { useFonts } from 'expo-font';
 import {
+  useFonts,
   Rubik_900Black,
   Rubik_300Light,
   Rubik_400Regular,
@@ -11,9 +11,6 @@ import {
 import { SplashScreen, Stack } from 'expo-router';
 import React, { useEffect } from 'react';
 import '~/i18n';
-import { TamaguiProvider } from 'tamagui';
-
-import config from '../tamagui.config';
 
 SplashScreen.preventAutoHideAsync();
 
@@ -23,7 +20,7 @@ export const unstable_settings = {
 };
 
 export default function RootLayout() {
-  const [loaded] = useFonts({
+  const [fontsLoaded] = useFonts({
     Rubik_900Black,
     Rubik_300Light,
     Rubik_400Regular,
@@ -31,24 +28,20 @@ export default function RootLayout() {
     Rubik_300Light_Italic,
     Rubik_400Regular_Italic,
     Rubik_600SemiBold_Italic,
-    Inter: require('@tamagui/font-inter/otf/Inter-Medium.otf'),
-    InterBold: require('@tamagui/font-inter/otf/Inter-Bold.otf'),
   });
 
   useEffect(() => {
-    if (loaded) {
+    if (fontsLoaded) {
       SplashScreen.hideAsync();
     }
-  }, [loaded]);
+  }, [fontsLoaded]);
 
-  if (!loaded) return null;
+  if (!fontsLoaded) return null;
 
   return (
-    <TamaguiProvider config={config}>
-      <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="modal" options={{ presentation: 'modal' }} />
-      </Stack>
-    </TamaguiProvider>
+    <Stack>
+      <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+      <Stack.Screen name="modal" options={{ presentation: 'modal' }} />
+    </Stack>
   );
 }
