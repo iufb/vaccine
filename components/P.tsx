@@ -7,10 +7,11 @@ export const P = ({ children }: { children?: ReactNode }) => {
       <Text
         style={{
           fontFamily: 'Rubik_400Regular',
-          fontSize: Device.deviceType === Device.DeviceType.TABLET ? 25 : 20,
-          fontWeight: 400,
+          fontSize: Device.deviceType === Device.DeviceType.TABLET ? 25 : 18,
           color: '#111827',
+          maxWidth: 400,
           textAlign: 'justify',
+          lineHeight: 24,
           paddingHorizontal: 10,
         }}>
         {children}

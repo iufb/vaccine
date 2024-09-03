@@ -107,7 +107,7 @@ const styles = StyleSheet.create({
     textAlign: 'left',
     color: 'white',
     fontWeight: '900',
-    fontFamily: 'Rubik',
+    fontFamily: 'Rubik_400Regular',
   },
   content: {
     flex: 1,

@@ -77,7 +77,7 @@ export function Card({ title, img, style, link, ...props }: Props) {
               color: '#e4e4e7',
               fontWeight: 'bold',
               paddingHorizontal: 10,
-              paddingVertical: 5,
+              paddingVertical: 10,
             }}>
             {t('card.link')}
           </Link>

@@ -1,5 +1,5 @@
 import { Stack } from 'expo-router';
-import { Text } from 'react-native';
+import TextTicker from 'react-native-text-ticker';
 
 export const StackScreen = ({ title }: { title: string }) => {
   return (
@@ -7,16 +7,15 @@ export const StackScreen = ({ title }: { title: string }) => {
       options={{
         headerTitleAlign: 'center',
         headerTitle: () => (
-          <Text
-            ellipsizeMode="tail"
-            style={{
-              color: '#111827',
-              fontSize: 20,
-              fontFamily: 'Rubik_400Regular',
-            }}
-            numberOfLines={1}>
+          <TextTicker
+            style={{ fontSize: 24, fontFamily: 'Rubik_400Regular' }}
+            duration={10000}
+            loop
+            bounce
+            repeatSpacer={50}
+            marqueeDelay={1000}>
             {title}
-          </Text>
+          </TextTicker>
         ),
         headerBackTitleVisible: false,
       }}
