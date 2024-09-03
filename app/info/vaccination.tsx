@@ -3,11 +3,11 @@ import { ScrollView, Text, View } from 'react-native';
 import { Container, P, Zero, One, Two } from '~/components/P';
 import { StackScreen } from '~/components/StackScreen';
 
-export default function Groups() {
+export default function Vaccination() {
   const { t } = useTranslation('');
   return (
     <>
-      <StackScreen title={t('info.groups.title')} />
+      <StackScreen title={t('info.vac.title')} />
       <ScrollView
         contentContainerStyle={{
           paddingHorizontal: 5,
@@ -15,7 +15,7 @@ export default function Groups() {
           backgroundColor: 'white',
         }}>
         <Trans
-          i18nKey={`info.groups.data`}
+          i18nKey={`info.vac.data`}
           components={{
             container: <Container></Container>,
             zero: <Zero></Zero>,
