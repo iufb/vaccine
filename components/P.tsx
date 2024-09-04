@@ -12,8 +12,6 @@ const P = ({ children }: BaseProps) => {
           fontFamily: 'Rubik_400Regular',
           fontSize: Device.deviceType === Device.DeviceType.TABLET ? 25 : 18,
           color: '#111827',
-          maxWidth: 400,
-          textAlign: 'justify',
           lineHeight: 24,
           paddingHorizontal: 10,
         }}>
@@ -34,8 +32,8 @@ const One = ({ children, style }: BaseProps) => (
     style={[
       {
         paddingLeft: 15,
-        fontWeight: 900,
-        fontFamily: 'Rubik_900Black',
+        fontWeight: 600,
+        fontFamily: 'Rubik_600SemiBold',
         fontSize: 18,
         color: '#450a0a',
       },

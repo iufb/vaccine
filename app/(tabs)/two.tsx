@@ -1,6 +1,6 @@
 import { Href } from 'expo-router';
 import { useTranslation } from 'react-i18next';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, ScrollView, View } from 'react-native';
 import { Link } from '~/components/Link';
 
 import { StackScreen } from '~/components/StackScreen';
@@ -18,12 +18,10 @@ export default function Infomation() {
   return (
     <>
       <StackScreen title={t('info.title')} />
-      <View
-        style={{
-          gap: 10,
+      <ScrollView
+        contentContainerStyle={{
           paddingLeft: 10,
           paddingVertical: 10,
-          backgroundColor: 'white',
           marginTop: 10,
         }}>
         {links.map(({ href, name }, idx) => {
@@ -34,12 +32,14 @@ export default function Infomation() {
               key={idx}
               name={name}
               style={[
-                idx < links.length - 1 && { borderBottomColor: '#c2c2c2', borderBottomWidth: 1 },
+                idx < links.length - 1 &&
+                  (idx + 1) % 3 != 0 && { borderBottomColor: '#c2c2c2', borderBottomWidth: 1 },
+                (idx + 1) % 3 == 0 && { marginBottom: 20 },
               ]}
             />
           );
         })}
-      </View>
+      </ScrollView>
     </>
   );
 }

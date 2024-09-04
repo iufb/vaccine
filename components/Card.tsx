@@ -53,34 +53,42 @@ export function Card({ title, img, style, link, ...props }: Props) {
             position: 'relative',
             height: '100%',
           }}>
-          <Text
-            style={{
-              alignSelf: 'flex-start',
-              backgroundColor: '#cbd5e1',
-              paddingVertical: 5,
-              paddingHorizontal: 10,
-              borderRadius: 10,
-              fontWeight: 900,
-              textAlign: 'center',
-              color: 'black',
-            }}>
-            {title}
-          </Text>
-          <Link
-            href={link}
+          <View style={{ borderRadius: 10, overflow: 'hidden', alignSelf: 'flex-start' }}>
+            <Text
+              style={{
+                alignSelf: 'flex-start',
+                backgroundColor: '#cbd5e1',
+                paddingVertical: 5,
+                paddingHorizontal: 10,
+                borderRadius: 10,
+                fontWeight: 900,
+                textAlign: 'center',
+                color: 'black',
+              }}>
+              {title}
+            </Text>
+          </View>
+          <View
             style={{
               position: 'absolute',
               right: 15,
               bottom: 15,
-              backgroundColor: '#24C7C7',
-              borderRadius: 15,
-              color: '#e4e4e7',
-              fontWeight: 'bold',
-              paddingHorizontal: 10,
-              paddingVertical: 10,
+              borderRadius: 10,
+              overflow: 'hidden',
             }}>
-            {t('card.link')}
-          </Link>
+            <Link
+              href={link}
+              style={{
+                backgroundColor: '#24C7C7',
+                borderRadius: 15,
+                color: '#e4e4e7',
+                fontWeight: 'bold',
+                paddingHorizontal: 10,
+                paddingVertical: 10,
+              }}>
+              {t('card.link')}
+            </Link>
+          </View>
         </View>
       </ImageBackground>
     </View>

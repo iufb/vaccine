@@ -1,7 +1,6 @@
-import * as Device from 'expo-device';
 import { Trans, useTranslation } from 'react-i18next';
-import { ScrollView, Text } from 'react-native';
-import { P } from '~/components/P';
+import { ScrollView } from 'react-native';
+import { Container, One, Two, Zero } from '~/components/P';
 import { StackScreen } from '~/components/StackScreen';
 export default function Introdution() {
   const { t } = useTranslation();
@@ -14,7 +13,10 @@ export default function Introdution() {
         <Trans
           i18nKey={'home.content.1.info'}
           components={{
-            p: <P></P>,
+            container: <Container></Container>,
+            zero: <Zero></Zero>,
+            one: <One></One>,
+            two: <Two></Two>,
           }}
         />
       </ScrollView>
