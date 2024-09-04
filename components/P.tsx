@@ -1,7 +1,7 @@
 import * as Device from 'expo-device';
 import { ReactNode } from 'react';
-import { Text, View } from 'react-native';
-interface BaseProps {
+import { StyleProp, Text, TextProps, View } from 'react-native';
+interface BaseProps extends TextProps {
   children?: ReactNode;
 }
 const P = ({ children }: BaseProps) => {
@@ -29,15 +29,18 @@ const Container = ({ children }: BaseProps) => (
 const Zero = ({ children }: BaseProps) => (
   <Text style={{ fontFamily: 'Rubik_400Regular', fontSize: 18 }}>{children}</Text>
 );
-const One = ({ children }: BaseProps) => (
+const One = ({ children, style }: BaseProps) => (
   <Text
-    style={{
-      paddingLeft: 15,
-      fontWeight: 900,
-      fontFamily: 'Rubik_900Black',
-      fontSize: 18,
-      color: '#450a0a',
-    }}>
+    style={[
+      {
+        paddingLeft: 15,
+        fontWeight: 900,
+        fontFamily: 'Rubik_900Black',
+        fontSize: 18,
+        color: '#450a0a',
+      },
+      style,
+    ]}>
     {children}
   </Text>
 );

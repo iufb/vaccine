@@ -9,6 +9,7 @@ const imageMap = {
   'virus-1': require('../../assets/virus-1.png'),
   'virus-2': require('../../assets/virus-2.png'),
   'virus-3': require('../../assets/virus-3.png'),
+  'virus-4': require('../../assets/virus-4.png'),
 };
 
 export default function Infomation() {
@@ -28,7 +29,7 @@ export default function Infomation() {
         {links.map(({ href, name }, idx) => {
           return (
             <Link
-              img={imageMap[`virus-${idx + 1}` as keyof typeof imageMap]}
+              img={imageMap[`virus-${2}` as keyof typeof imageMap]}
               href={href as Href<string>}
               key={idx}
               name={name}

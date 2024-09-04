@@ -34,7 +34,7 @@ export const Link = ({ href, img, name, style }: LinkProps) => {
         ]}>
         <View style={{ flexDirection: 'row', gap: 10, alignItems: 'center' }}>
           <Image source={img} style={{ width: 32, height: 32 }} />
-          <Text style={{ fontSize: 22, maxWidth: 320, color: '#1f2937' }}>{name}</Text>
+          <Text style={{ fontSize: 20,textAlign: 'left', maxWidth: 320, color: '#1f2937' }}>{name}</Text>
         </View>
         <FontAwesome name="chevron-right" size={20} color={'gray'} />
       </View>

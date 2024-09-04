@@ -10,12 +10,17 @@ export default function TabLayout() {
       screenOptions={{
         tabBarActiveTintColor: '#24C7C7',
         tabBarStyle: { height: 80, paddingBottom: 10 },
+        tabBarLabelStyle: {
+          fontFamily: 'Rubik_400Regular',
+          fontSize: 18,
+          paddingBottom: 10,
+          fontWeight: 900,
+        },
       }}>
       <Tabs.Screen
         name="index"
         options={{
           tabBarLabel: t('tabs.home'),
-          tabBarLabelStyle: { fontSize: 14, paddingBottom: 10 },
           tabBarIcon: ({ color }) => <TabBarIcon name="home" color={color} />,
           headerShown: false,
         }}
@@ -24,7 +29,6 @@ export default function TabLayout() {
         name="two"
         options={{
           tabBarLabel: t('tabs.info'),
-          tabBarLabelStyle: { fontSize: 14, paddingBottom: 10 },
           tabBarIcon: ({ color }) => <TabBarIcon name="book" color={color} />,
         }}
       />
