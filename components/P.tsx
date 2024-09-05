@@ -24,8 +24,8 @@ const P = ({ children }: BaseProps) => {
 const Container = ({ children }: BaseProps) => (
   <View style={{ paddingHorizontal: 10 }}>{children}</View>
 );
-const Zero = ({ children }: BaseProps) => (
-  <Text style={{ fontFamily: 'Rubik_400Regular', fontSize: 18 }}>{children}</Text>
+const Zero = ({ children, style }: BaseProps) => (
+  <Text style={[{ fontFamily: 'Rubik_400Regular', fontSize: 18 }, style]}>{children}</Text>
 );
 const One = ({ children, style }: BaseProps) => (
   <Text

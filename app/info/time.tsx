@@ -18,8 +18,8 @@ export default function Time() {
           i18nKey={`info.time.data`}
           components={{
             container: <Container></Container>,
-            zero: <Zero></Zero>,
-            one: <One></One>,
+            zero: <Zero style={{ fontFamily: 'Rubik_600SemiBold' }}></Zero>,
+            one: <One style={{ paddingLeft: 0 }}></One>,
             two: <Two></Two>,
             i: (
               <One
