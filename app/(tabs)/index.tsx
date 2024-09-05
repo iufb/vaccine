@@ -15,7 +15,6 @@ export default function Home() {
             display: 'flex',
             flexDirection: 'column',
             gap: 10,
-            marginTop: 40,
           }}>
           <Card
             img={require('../../assets/home-bg-1.jpg')}

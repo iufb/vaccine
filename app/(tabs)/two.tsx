@@ -22,7 +22,7 @@ export default function Infomation() {
         contentContainerStyle={{
           paddingLeft: 10,
           paddingVertical: 10,
-          marginTop: 10,
+          marginVertical: 10,
         }}>
         {links.map(({ href, name }, idx) => {
           return (
@@ -35,6 +35,7 @@ export default function Infomation() {
                 idx < links.length - 1 &&
                   (idx + 1) % 3 != 0 && { borderBottomColor: '#c2c2c2', borderBottomWidth: 1 },
                 (idx + 1) % 3 == 0 && { marginBottom: 20 },
+                idx == links.length - 1 && { marginBottom: 40 },
               ]}
             />
           );
