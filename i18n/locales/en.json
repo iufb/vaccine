@@ -1,7 +1,120 @@
 {
+  "home": {
+    "links": {
+      "1": "Introduction",
+      "2": "Definitions",
+      "3": "List of abbreviations"
+    },
+    "content": {
+      "1": {
+        "title": "Introduction",
+        "info": "<container><zero>\t\tVaccines are one of the greatest achievements in global health and development. For over two centuries, they have safely reduced the incidence of diseases such as polio, measles, and smallpox, helping children grow up happy and healthy. Currently, there are vaccines in the world to prevent more than 20 life-threatening diseases, helping people of all ages to live longer and healthier. Immunization currently prevents 3.5-5 million deaths annually from diseases such as diphtheria, tetanus, whooping cough, influenza, and measles [1]. Vaccination is a key component of primary health care (PHC) and an indisputable human right. This is also one of the best investments in healthcare that money can buy. Vaccines are also crucial for preventing and combating outbreaks of infectious diseases. They form the basis of global health security and will become a crucial tool in the fight against antimicrobial resistance [2].</zero><zero>\t\tThanks to global immunization efforts, children worldwide can walk, play, dance, and learn. Vaccinated children perform better in school, and the economic benefits extend to all their communities. Today, vaccines are estimated to be one of the most cost-effective means of improving national prosperity [3]. The COVID-19 pandemic, its associated disruptions, and COVID-19 vaccination efforts have strained healthcare systems in 2020 and 2021, leading to significant disruptions in vaccination. However, from a global perspective, recovery is on the horizon - in 2022, the coverage of diphtheria, pertussis, and tetanus (DPT) immunization, although uneven across countries, has nearly returned to 2019 levels [4].</zero><zero>\t\tIn Kazakhstan, vaccination is regulated by the Resolution of the Government of the Republic of Kazakhstan No.612 dated September 24, 2020, “On approval of the list of diseases for mandatory preventive vaccinations within the guaranteed volume of medical care, the rules, terms, and the population groups subject to preventive vaccinations”, by the Order of the Minister of Health of the Republic of Kazakhstan dated October 21, 2020 No. KR DSM-146/2020 “List of medical contraindications to preventive vaccinations”, by the Order of the Acting Minister of Health of the Republic of Kazakhstan dated September 21, 2023 No. 150 “On the approval of Sanitary rules “Sanitary and epidemiological requirements for the organization and conduct of preventive vaccinations to the population”, by the Order of the Minister of Health of the Republic of Kazakhstan dated December 2, 2022 No. KR DSM-151 “On the approval of Sanitary Rules “Sanitary and epidemiological requirements for the organization and conduct of sanitary and anti-epidemic, sanitary and preventive measures to prevent infections associated with the provision of medical care”, by the Order of the Minister of Health of the Republic of Kazakhstan dated October 21, 2020 No. KR DSM-146/2020 “List of medical contraindications to preventive vaccinations”, by the Order of the Minister of Health of the Republic of Kazakhstan dated November 30, 2020 No. KR DSM-214/2020 “On the approval of the rules for the prevention of tuberculosis”, and by the Resolution of the Government of the Republic of Kazakhstan from February 20, 2024 No. 102 “On Amendments to the Resolution of the Government of the Republic of Kazakhstan from September 24, 2020 No. 612 “On approval of the list of diseases against which mandatory preventive vaccinations are conducted within the guaranteed scope of medical care, rules, timing of their conduct and population groups subject to preventive vaccinations.”</zero><zero>\t\tI. Mandatory preventive vaccinations (administration of vaccines) against the following infectious diseases are carried out at the expense of the republican budget after obtaining the informed consent of the vaccinated person for vaccination:</zero><one>1) Routine preventive immunizations:</one><one>Disease caused by human papillomavirus;</one><one>2) Prophylactic vaccinations for epidemiologic indications:</one><one>Coronavirus infection.</one><zero>\t\tII. Mandatory preventive vaccinations (administration of vaccines and other immunobiological preparations) against the following infectious and parasitic diseases are carried out at the expense of local budgets after obtaining the informed consent of the vaccinated person for vaccination:</zero><one>1) Routine preventive immunizations:</one><two>Viral hepatitis 'A';</two><two>Viral hepatitis 'B';</two><two>Haemophilus influenzae type b;</two><two>Diphtheria;</two><two>Whooping cough;</two><two>Measles;</two><two>Rubella;</two><two>Pneumococcal infection;</two><two>Polio;</two><two>Tetanus;</two><two>Tuberculosis;</two><two>Epidemic mumps;</two><one>2) Prophylactic vaccinations for epidemiologic indications:</one><two>Viral hepatitis 'A';</two><two>Viral hepatitis 'B';</two><two>Diphtheria;</two><two>Spring and summer tick-borne encephalitis;</two><two>Antrax;</two><two>Rabies;</two><two>Measles;</two><two>Rubella;</two><two>Plague;</two><two>Tetanus;</two><two>Tularemia;</two><two>Influenza;</two><two>Typhoid fever;</two><two>Epidemic mumps.</two></container>"
+      },
+      "2": {
+        "title": "Definitions",
+        "info": "<p>\t\t<r>Anatoxins</r> – immunobiological medicinal preparations derived from toxins or produced using recombinant technology. They lack pronounced toxic properties and are capable of inducing the production of antibodies against the original toxin.; \n\t\t<r>Vaccines</r> – medicinal preparations used for the specific prevention of infectious diseases, exerting their prophylactic effect through the immune system. \n\t\t<r>Live vaccines</r> – vaccines prepared from live attenuated microorganisms. \n\t\t<r>Immunoglobulins</r> – immunobiological medicinal preparations made from human and animal blood serum, as well as monoclonal antibodies, used for emergency prophylaxis and treatment of infectious diseases. \n\t\t<r>Immunological medicinal product (IMP)</r> – a medicinal product intended for the formation of active or passive immunity or for the diagnosis of the presence of immunity or the diagnosis (production) of a specific acquired change in the immune response to allergens. \n\t\t<r>Inactivated vaccines</r> – vaccines prepared from killed microorganisms or from individual components of microbial cells and products of their vital activity, as well as obtained by other biotechnological methods. \n\t\t<r>Adverse events following immunization (AEFI)</r> – medical incidents that occur after immunization, causing concern to healthcare workers or the public and presumed to be caused by the immunization.</p>"
+      },
+      "3": {
+        "title": "List of abbreviations, symbols",
+        "data": [
+          {
+            "key": "APDTV",
+            "description": "Adsorbed pertussis-diphtheria-tetanus vaccine"
+          },
+          {
+            "key": "HIV",
+            "description": "Human immunodeficiency virus"
+          },
+          {
+            "key": "SSTBE",
+            "description": "Spring-summer tick-borne encephalitis"
+          },
+          {
+            "key": "GAFMC",
+            "description": "Guaranteed amount of free medical care"
+          },
+          {
+            "key": "IV",
+            "description": "Inactivated vaccine"
+          },
+          {
+            "key": "IMP",
+            "description": "Immunobiological medicinal product"
+          },
+          {
+            "key": "IPV",
+            "description": "Inactivated polio vaccine"
+          },
+          {
+            "key": "AEAI",
+            "description": "Adverse effects after immunization"
+          },
+          {
+            "key": "OLV",
+            "description": "Oral live vaccine"
+          },
+          {
+            "key": "PHC",
+            "description": "Primary health care"
+          },
+          {
+            "key": "AIDS",
+            "description": "Acquired immunodeficiency syndrome"
+          },
+          {
+            "key": "BCG",
+            "description": "Bacillus Calmette-Guérin"
+          },
+          {
+            "key": "COVID-19",
+            "description": "COronaVIrus Disease 2019"
+          },
+          {
+            "key": "DTP",
+            "description": "Diphtheria-tetanus and pertussis"
+          },
+          {
+            "key": "HAV",
+            "description": "Hepatitis A Virus"
+          },
+          {
+            "key": "Hib",
+            "description": "Haemophilus influenzae type b"
+          },
+          {
+            "key": "HBsAg",
+            "description": "Hepatitis B surface antigen"
+          },
+          {
+            "key": "HBV",
+            "description": "Hepatitis B Virus"
+          },
+          {
+            "key": "MMR",
+            "description": "Measles, mumps and rubella"
+          },
+          {
+            "key": "MT",
+            "description": "Mycobacterium tuberculosis"
+          },
+          {
+            "key": "Vi-PS",
+            "description": "Vi-polysaccharide"
+          },
+          {
+            "key": "SARS-CoV-2",
+            "description": "Severe acute respiratory syndrome-related coronavirus 2"
+          }
+        ]
+      }
+    }
+  },
   "tabs": {
-    "home": "Главный",
-    "info": "Информация"
+    "home": "Home",
+    "info": "Information"
+  },
+  "card": {
+    "link": "Go to"
   },
   "settings": {
     "title": "Settings",
