@@ -6,13 +6,19 @@ import { Link } from '~/components/Link';
 import { StackScreen } from '~/components/StackScreen';
 import { isTablet } from '~/components/constants';
 
-const imageMap = {
-  'virus-1': require('../../assets/virus-1.png'),
-  'virus-2': require('../../assets/virus-2.png'),
-  'virus-3': require('../../assets/virus-3.png'),
-  'virus-4': require('../../assets/virus-4.png'),
-};
-
+const imageMap = [
+  require('../../assets/info-link-virus.png'),
+  require('../../assets/info-link-rules.png'),
+  require('../../assets/info-link-group.png'),
+  require('../../assets/info-link-vac.png'),
+  require('../../assets/info-link-not.png'),
+  require('../../assets/info-link-time.png'),
+  require('../../assets/info-link-test.png'),
+  require('../../assets/info-link-about.png'),
+];
+function getRandomInRange(min: number, max: number) {
+  return Math.floor(Math.random() * (max - min) + min);
+}
 export default function Infomation() {
   const { t } = useTranslation();
   const links = t('info.links', { returnObjects: true }) as Array<{ href: string; name: string }>;
@@ -28,7 +34,7 @@ export default function Infomation() {
         {links.map(({ href, name }, idx) => {
           return (
             <Link
-              img={imageMap[`virus-${2}` as keyof typeof imageMap]}
+              img={imageMap[idx]}
               href={href as Href<string>}
               key={idx}
               name={name}

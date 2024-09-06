@@ -35,7 +35,7 @@ export const Link = ({ href, img, name, style }: LinkProps) => {
           style,
         ]}>
         <View style={{ flexDirection: 'row', gap: 10, alignItems: 'center' }}>
-          <Image source={img} style={{ width: 32, height: 32 }} />
+          <Image source={img} style={{ width: 32, height: 32, marginLeft: 5 }} />
           <UIText
             style={[
               { textAlign: 'left', color: '#1f2937' },
