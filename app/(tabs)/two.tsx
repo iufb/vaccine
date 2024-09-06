@@ -4,6 +4,7 @@ import { StyleSheet, ScrollView, View } from 'react-native';
 import { Link } from '~/components/Link';
 
 import { StackScreen } from '~/components/StackScreen';
+import { isTablet } from '~/components/constants';
 
 const imageMap = {
   'virus-1': require('../../assets/virus-1.png'),
@@ -17,10 +18,10 @@ export default function Infomation() {
   const links = t('info.links', { returnObjects: true }) as Array<{ href: string; name: string }>;
   return (
     <>
-      <StackScreen title={t('info.title')} />
+      <StackScreen showBackBtn={false} title={t('info.title')} />
       <ScrollView
         contentContainerStyle={{
-          paddingLeft: 10,
+          paddingHorizontal: 10,
           paddingVertical: 10,
           marginVertical: 10,
         }}>
@@ -34,7 +35,7 @@ export default function Infomation() {
               style={[
                 idx < links.length - 1 &&
                   (idx + 1) % 3 != 0 && { borderBottomColor: '#c2c2c2', borderBottomWidth: 1 },
-                (idx + 1) % 3 == 0 && { marginBottom: 20 },
+                (idx + 1) % 3 == 0 && { marginBottom: isTablet ? 40 : 20 },
                 idx == links.length - 1 && { marginBottom: 40 },
               ]}
             />

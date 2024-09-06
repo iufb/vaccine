@@ -9,6 +9,8 @@ import {
   View,
   ViewProps,
 } from 'react-native';
+import { UIText } from '~/components/P';
+import { isTablet } from '~/components/constants';
 interface Props {
   title: string;
   link: Href<string>;
@@ -29,7 +31,7 @@ export function Card({ title, img, style, link, ...props }: Props) {
           alignSelf: 'center',
           opacity: 60,
           width: '100%',
-          height: 130,
+          height: isTablet ? 230 : 130,
         }}
         source={img}>
         <View
@@ -54,10 +56,10 @@ export function Card({ title, img, style, link, ...props }: Props) {
             height: '100%',
           }}>
           <View style={{ borderRadius: 10, overflow: 'hidden', alignSelf: 'flex-start' }}>
-            <Text
+            <UIText
               style={{
                 alignSelf: 'flex-start',
-                backgroundColor: '#cbd5e1',
+                backgroundColor: '#e2e8f0',
                 paddingVertical: 5,
                 paddingHorizontal: 10,
                 borderRadius: 10,
@@ -66,7 +68,7 @@ export function Card({ title, img, style, link, ...props }: Props) {
                 color: 'black',
               }}>
               {title}
-            </Text>
+            </UIText>
           </View>
           <View
             style={{
@@ -83,6 +85,7 @@ export function Card({ title, img, style, link, ...props }: Props) {
                 borderRadius: 15,
                 color: '#e4e4e7',
                 fontWeight: 'bold',
+                fontSize: isTablet ? 22 : 16,
                 paddingHorizontal: 10,
                 paddingVertical: 10,
               }}>

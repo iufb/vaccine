@@ -18,6 +18,7 @@ import Animated, {
   useSharedValue,
   withTiming,
 } from 'react-native-reanimated';
+import { UIText } from '~/components/P';
 
 export const Accordion = ({ title, children }: { title: string; children: ReactNode }) => {
   const open = useSharedValue(false);
@@ -36,7 +37,7 @@ export const Accordion = ({ title, children }: { title: string; children: ReactN
     <SafeAreaView style={styles.container}>
       <View>
         <TouchableOpacity style={styles.buttonContainer} onPress={onPress}>
-          <Text style={styles.btnText}>{title}</Text>
+          <UIText style={styles.btnText}>{title}</UIText>
           <Animated.View style={[animatedStyle]}>
             <FontAwesome size={22} color={'white'} name="chevron-down" />
           </Animated.View>

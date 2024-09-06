@@ -2,5 +2,9 @@
   "tabs": {
     "home": "Главный",
     "info": "Информация"
+  },
+  "settings": {
+    "title": "Settings",
+    "lang": "Language"
   }
 }

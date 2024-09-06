@@ -1,57 +1,64 @@
 import * as Device from 'expo-device';
 import { ReactNode } from 'react';
 import { StyleProp, Text, TextProps, View } from 'react-native';
+import { isTablet } from '~/components/constants';
 interface BaseProps extends TextProps {
   children?: ReactNode;
 }
 const P = ({ children }: BaseProps) => {
   return (
     <View style={{ paddingHorizontal: 8 }}>
-      <Text
+      <UIText
         style={{
-          fontFamily: 'Rubik_400Regular',
-          fontSize: Device.deviceType === Device.DeviceType.TABLET ? 25 : 18,
-          color: '#111827',
-          lineHeight: 24,
           paddingHorizontal: 10,
         }}>
         {children}
-      </Text>
+      </UIText>
     </View>
   );
 };
-
+const UIText = ({ children, style }: BaseProps) => {
+  return (
+    <Text
+      style={[
+        {
+          fontFamily: 'Rubik_400Regular',
+          fontSize: isTablet ? 22 : 18,
+          color: '#111827',
+          lineHeight: isTablet ? 28 : 24,
+        },
+        ...(Array.isArray(style) ? style : [style]),
+      ]}>
+      {children}
+    </Text>
+  );
+};
 const Container = ({ children }: BaseProps) => (
   <View style={{ paddingHorizontal: 10 }}>{children}</View>
 );
-const Zero = ({ children, style }: BaseProps) => (
-  <Text style={[{ fontFamily: 'Rubik_400Regular', fontSize: 18 }, style]}>{children}</Text>
-);
+const Zero = ({ children, style }: BaseProps) => <UIText style={[style]}>{children}</UIText>;
 const One = ({ children, style }: BaseProps) => (
-  <Text
+  <UIText
     style={[
       {
-        paddingLeft: 15,
+        paddingLeft: isTablet ? 25 : 15,
         fontWeight: 600,
         fontFamily: 'Rubik_600SemiBold',
-        fontSize: 18,
         color: '#450a0a',
       },
       style,
     ]}>
     {children}
-  </Text>
+  </UIText>
 );
 const Two = ({ children }: BaseProps) => (
-  <Text
+  <UIText
     style={{
-      paddingLeft: 25,
-      fontFamily: 'Rubik_400Regular',
-      fontSize: 18,
+      paddingLeft: isTablet ? 45 : 25,
       fontStyle: 'italic',
       color: 'black',
     }}>
     {children}
-  </Text>
+  </UIText>
 );
-export { Container, One, P, Two, Zero };
+export { Container, One, P, Two, Zero, UIText };

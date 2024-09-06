@@ -32,6 +32,7 @@ export default function Test() {
       <ScrollView
         contentContainerStyle={{
           marginVertical: 20,
+          paddingTop: 20,
           paddingLeft: 20,
           paddingRight: 10,
           paddingBottom: 30,

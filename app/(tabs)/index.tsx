@@ -2,6 +2,7 @@ import { Stack } from 'expo-router';
 import { useTranslation } from 'react-i18next';
 import { StyleSheet, View, Image } from 'react-native';
 import { Card } from '~/components/Card';
+import { isTablet } from '~/components/constants';
 
 export default function Home() {
   const { t } = useTranslation();
@@ -32,7 +33,12 @@ export default function Home() {
             link="/home/Abbr"
           />
         </View>
-        <Image style={{ alignItems: 'flex-end' }} source={require('../../assets/1.png')} />
+        <View style={{ alignItems: 'center' }}>
+          <Image
+            style={{ width: isTablet ? 350 : 200, height: isTablet ? 400 : 240 }}
+            source={require('../../assets/2.png')}
+          />
+        </View>
       </View>
     </>
   );
@@ -42,6 +48,7 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: '#fff',
     flex: 1,
+    display: 'flex',
     paddingTop: 40,
     paddingHorizontal: 15,
   },

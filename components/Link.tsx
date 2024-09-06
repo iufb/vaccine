@@ -9,6 +9,8 @@ import {
   View,
   ViewStyle,
 } from 'react-native';
+import { UIText } from '~/components/P';
+import { isTablet } from '~/components/constants';
 interface LinkProps {
   href: Href<string>;
   name: string;
@@ -34,9 +36,13 @@ export const Link = ({ href, img, name, style }: LinkProps) => {
         ]}>
         <View style={{ flexDirection: 'row', gap: 10, alignItems: 'center' }}>
           <Image source={img} style={{ width: 32, height: 32 }} />
-          <Text style={{ fontSize: 20, textAlign: 'left', maxWidth: 300, color: '#1f2937' }}>
+          <UIText
+            style={[
+              { textAlign: 'left', color: '#1f2937' },
+              isTablet ? { maxWidth: 600 } : { maxWidth: 300 },
+            ]}>
             {name}
-          </Text>
+          </UIText>
         </View>
         <FontAwesome name="chevron-right" size={20} color={'gray'} />
       </View>

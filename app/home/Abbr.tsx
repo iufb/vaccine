@@ -5,6 +5,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Accordion } from '~/components/Accordion';
 import { StackScreen } from '~/components/StackScreen';
+import { isTablet } from '~/components/constants';
 
 export default function Abbr() {
   const { t } = useTranslation();
@@ -22,7 +23,9 @@ export default function Abbr() {
         <View style={{ paddingVertical: 10, marginBottom: 30 }}>
           {data.map((item: { key: string; description: string }) => (
             <Accordion key={item.key} title={item.key}>
-              <Text style={{ fontFamily: 'Rubik_400Regular' }}>{item.description}</Text>
+              <Text style={{ fontFamily: 'Rubik_400Regular', fontSize: isTablet ? 22 : 18 }}>
+                {item.description}
+              </Text>
             </Accordion>
           ))}
         </View>

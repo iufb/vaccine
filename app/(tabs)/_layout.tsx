@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { TabBarIcon } from '../../components/TabBarIcon';
 import { Text } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
+import { isTablet } from '~/components/constants';
 
 export default function TabLayout() {
   const { t } = useTranslation();
@@ -11,11 +12,11 @@ export default function TabLayout() {
     <Tabs
       screenOptions={{
         tabBarActiveTintColor: '#24C7C7',
-        tabBarStyle: { height: 80, paddingBottom: 10 },
+        tabBarStyle: [{ height: 80 }],
+        tabBarInactiveTintColor: '#94a3b8',
         tabBarLabelStyle: {
           fontFamily: 'Rubik_400Regular',
-          fontSize: 18,
-          paddingBottom: 10,
+          fontSize: isTablet ? 22 : 18,
           fontWeight: 900,
         },
       }}>
@@ -26,11 +27,13 @@ export default function TabLayout() {
             <Text
               style={{
                 fontFamily: 'Rubik_400Regular',
-                fontSize: 22,
+                fontSize: isTablet ? 24 : 20,
+                marginLeft: 20,
               }}>
               {t('tabs.home')}
             </Text>
           ),
+          headerTitleAlign: 'left',
           headerRight: () => (
             <Link href={'/modal'}>
               <FontAwesome name="gear" size={28} />
