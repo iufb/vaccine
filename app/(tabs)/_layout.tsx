@@ -16,7 +16,8 @@ export default function TabLayout() {
         tabBarInactiveTintColor: '#94a3b8',
         tabBarLabelStyle: {
           fontFamily: 'Rubik_400Regular',
-          fontSize: isTablet ? 22 : 18,
+          fontSize: isTablet ? 22 : 17,
+          paddingBottom: isTablet ? 0 : 14,
           fontWeight: 900,
         },
       }}>
