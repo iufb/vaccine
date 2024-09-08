@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { TabBarIcon } from '../../components/TabBarIcon';
 import { Text } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
-import { isTablet } from '~/components/constants';
+import { isIOS, isTablet } from '~/components/constants';
 
 export default function TabLayout() {
   const { t } = useTranslation();
@@ -12,12 +12,12 @@ export default function TabLayout() {
     <Tabs
       screenOptions={{
         tabBarActiveTintColor: '#24C7C7',
-        tabBarStyle: [{ height: 80 }],
+        tabBarStyle: [{ height: isIOS ? 80 : 65 }],
         tabBarInactiveTintColor: '#94a3b8',
         tabBarLabelStyle: {
           fontFamily: 'Rubik_400Regular',
           fontSize: isTablet ? 22 : 17,
-          paddingBottom: isTablet ? 0 : 14,
+          paddingBottom: isTablet ? 0 : isIOS ? 0 : 14,
           fontWeight: 900,
         },
       }}>

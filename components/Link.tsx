@@ -34,15 +34,13 @@ export const Link = ({ href, img, name, style }: LinkProps) => {
           },
           style,
         ]}>
-        <View style={{ flexDirection: 'row', gap: 10, alignItems: 'center' }}>
+        <View
+          style={[
+            { flexDirection: 'row', gap: 10, alignItems: 'center' },
+            isTablet ? { width: 600 } : { width: 270 },
+          ]}>
           <Image source={img} style={{ width: 32, height: 32, marginLeft: 5 }} />
-          <UIText
-            style={[
-              { textAlign: 'left', color: '#1f2937' },
-              isTablet ? { maxWidth: 600 } : { maxWidth: 300 },
-            ]}>
-            {name}
-          </UIText>
+          <UIText style={[{ textAlign: 'left', color: '#1f2937' }]}>{name}</UIText>
         </View>
         <FontAwesome name="chevron-right" size={20} color={'gray'} />
       </View>

@@ -18,13 +18,16 @@ export default function Test() {
       return;
     }
     let right = 0;
-
+    let wrong = [];
     for (let i = 0; i < test.length; i++) {
       if (test[i].correct_answer == answersState[i]) {
         right++;
+      } else {
+        wrong.push(i + 1);
+        console.log(test[i].correct_answer, answersState[i]);
       }
     }
-    Alert.alert(t('info.test.alert.res', { right, wrong: test.length - right }));
+    Alert.alert(t('info.test.alert.res', { right, wrong: wrong.join(',') }));
   };
   return (
     <>
