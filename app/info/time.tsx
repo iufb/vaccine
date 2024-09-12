@@ -2,6 +2,7 @@ import { Trans, useTranslation } from 'react-i18next';
 import { ScrollView } from 'react-native';
 import { Container, One, Two, Zero } from '~/components/P';
 import { StackScreen } from '~/components/StackScreen';
+import { Table } from '~/components/TableText';
 
 export default function Time() {
   const { t } = useTranslation();
