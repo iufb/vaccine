@@ -15,7 +15,7 @@ interface LinkProps {
   href: Href<string>;
   name: string;
   style?: StyleProp<ViewStyle>;
-  img: ImageSourcePropType;
+  img?: ImageSourcePropType;
 }
 export const Link = ({ href, img, name, style }: LinkProps) => {
   const router = useRouter();
@@ -37,9 +37,9 @@ export const Link = ({ href, img, name, style }: LinkProps) => {
         <View
           style={[
             { flexDirection: 'row', gap: 10, alignItems: 'center' },
-            isTablet ? { width: 600 } : { width: 270 },
+            isTablet ? { width: img ? 600 : '100%' } : { width: img ? 270 : '100%' },
           ]}>
-          <Image source={img} style={{ width: 32, height: 32, marginLeft: 5 }} />
+          {img && <Image source={img} style={{ width: 32, height: 32, marginLeft: 5 }} />}
           <UIText style={[{ textAlign: 'left', color: '#1f2937' }]}>{name}</UIText>
         </View>
         <FontAwesome name="chevron-right" size={20} color={'gray'} />

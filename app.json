@@ -36,7 +36,17 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
+      },
+      "package": "com.iufb.vaccinevq"
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "27907568-eb39-4c5b-83a2-696f41a0bc7e"
       }
-    }
+    },
+    "owner": "iufb"
   }
 }

@@ -1,6 +1,7 @@
 import { Trans, useTranslation } from 'react-i18next';
 import { ScrollView } from 'react-native';
 import { Container, Zero, One, Two } from '~/components/P';
+import { Link } from '~/components/Link';
 import { StackScreen } from '~/components/StackScreen';
 
 export default function Contraindications() {
@@ -18,6 +19,7 @@ export default function Contraindications() {
           i18nKey={`info.contraindications.data`}
           components={{
             container: <Container></Container>,
+            link: <Link></Link>,
             zero: <Zero></Zero>,
             one: <One></One>,
             two: <Two></Two>,

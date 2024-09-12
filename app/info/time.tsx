@@ -1,6 +1,6 @@
-import { useTranslation, Trans } from 'react-i18next';
+import { Trans, useTranslation } from 'react-i18next';
 import { ScrollView } from 'react-native';
-import { Container, Zero, One, Two } from '~/components/P';
+import { Container, One, Two, Zero } from '~/components/P';
 import { StackScreen } from '~/components/StackScreen';
 
 export default function Time() {
