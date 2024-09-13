@@ -17,13 +17,14 @@ export default function ConLink() {
           marginTop: 10,
           paddingVertical: 20,
           backgroundColor: 'white',
+          flexGrow: 1,
         }}>
         <Container>
           <Trans
             i18nKey={params.id + '.content'}
             components={{
               zero: <Zero></Zero>,
-              one: <One></One>,
+              one: <One style={{ color: '#111827' }}></One>,
               two: <Two></Two>,
               i: (
                 <One
