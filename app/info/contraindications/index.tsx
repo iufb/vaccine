@@ -49,7 +49,7 @@ export default function Contraindications() {
           components={{
             container: <Container></Container>,
             ...getLinks(),
-            zero: <Zero></Zero>,
+            zero: <Zero style={{ marginVertical: 20 }}></Zero>,
             one: <One></One>,
             two: <Two></Two>,
             i: <One></One>,
