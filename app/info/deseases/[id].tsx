@@ -16,6 +16,7 @@ export default function Desease() {
           paddingHorizontal: 5,
           paddingVertical: 10,
           backgroundColor: 'white',
+          flexGrow: 1,
         }}>
         <Trans
           i18nKey={`info.characteristics.desease.${params.id}`}

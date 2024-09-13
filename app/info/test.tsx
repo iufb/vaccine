@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Alert, ScrollView, Text, TouchableOpacity, View } from 'react-native';
+import { UIText } from '~/components/P';
 import { StackScreen } from '~/components/StackScreen';
 import { RadioButtonsGroup } from '~/components/Test';
 
@@ -44,7 +45,7 @@ export default function Test() {
         }}>
         {test.map(({ question, answers, correct_answer }, idx) => (
           <View style={{ gap: 10 }} key={idx}>
-            <Text style={{ fontFamily: 'Rubik_400Regular', fontSize: 18 }}>{question}</Text>
+            <UIText>{question}</UIText>
             <RadioButtonsGroup
               values={answers}
               onSelect={(value) => {
@@ -63,15 +64,13 @@ export default function Test() {
             paddingVertical: 10,
             borderRadius: 10,
           }}>
-          <Text
+          <UIText
             style={{
               textAlign: 'center',
-              fontFamily: 'Rubik_400Regular',
-              fontSize: 18,
               color: 'white',
             }}>
             {t('info.test.checkButton')}
-          </Text>
+          </UIText>
         </TouchableOpacity>
       </ScrollView>
     </>

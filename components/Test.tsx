@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Text, TouchableOpacity, View } from 'react-native';
 import * as Device from 'expo-device';
+import { UIText } from '~/components/P';
 const Question = () => {};
 
 const Answer = () => {};
@@ -40,14 +41,13 @@ const RadioButton = ({
           />
         ) : null}
       </View>
-      <Text
+      <UIText
         style={[
-          { fontFamily: 'Rubik_400Regular', fontSize: 18, marginBottom: 5 },
           selected && { fontFamily: 'Rubik_600SemiBold', marginBottom: 3 },
           Device.deviceType == Device.DeviceType.PHONE && { maxWidth: 335 },
         ]}>
         {label}
-      </Text>
+      </UIText>
     </TouchableOpacity>
   );
 };
