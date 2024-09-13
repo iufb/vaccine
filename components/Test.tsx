@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Text, TouchableOpacity, View } from 'react-native';
 import * as Device from 'expo-device';
 import { UIText } from '~/components/P';
+import { isTablet } from '~/components/constants';
 const Question = () => {};
 
 const Answer = () => {};
@@ -44,7 +45,7 @@ const RadioButton = ({
       <UIText
         style={[
           selected && { fontFamily: 'Rubik_600SemiBold', marginBottom: 3 },
-          Device.deviceType == Device.DeviceType.PHONE && { maxWidth: 335 },
+          { maxWidth: isTablet ? 600 : 335 },
         ]}>
         {label}
       </UIText>
