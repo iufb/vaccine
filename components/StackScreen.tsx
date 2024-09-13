@@ -1,6 +1,6 @@
 import { FontAwesome } from '@expo/vector-icons';
 import { Stack, useRouter } from 'expo-router';
-import { Image, TouchableOpacity } from 'react-native';
+import { Image, TouchableOpacity, View } from 'react-native';
 import TextTicker from 'react-native-text-ticker';
 import { isTablet } from '~/components/constants';
 
@@ -17,15 +17,21 @@ export const StackScreen = ({
       options={{
         headerTitleAlign: 'center',
         headerTitle: () => (
-          <TextTicker
-            style={{ fontSize: isTablet ? 24 : 20, fontFamily: 'Rubik_400Regular' }}
-            duration={10000}
-            loop
-            bounce
-            repeatSpacer={50}
-            marqueeDelay={1000}>
-            {title}
-          </TextTicker>
+          <View style={{ maxWidth: '90%', flex: 1, alignItems: 'center' }}>
+            <TextTicker
+              style={{
+                fontSize: isTablet ? 24 : 20,
+                fontFamily: 'Rubik_400Regular',
+                textAlign: 'center',
+              }}
+              duration={10000}
+              loop
+              bounce
+              repeatSpacer={50}
+              marqueeDelay={1000}>
+              {title}
+            </TextTicker>
+          </View>
         ),
         headerLeft: showBackBtn
           ? () => (
