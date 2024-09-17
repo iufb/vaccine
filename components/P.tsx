@@ -1,7 +1,7 @@
 import * as Device from 'expo-device';
 import { ReactNode } from 'react';
 import { StyleProp, Text, TextProps, View } from 'react-native';
-import { isTablet } from '~/components/constants';
+import { isIOS, isTablet } from '~/components/constants';
 interface BaseProps extends TextProps {
   children?: ReactNode;
 }

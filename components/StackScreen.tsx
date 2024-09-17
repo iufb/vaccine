@@ -17,21 +17,19 @@ export const StackScreen = ({
       options={{
         headerTitleAlign: 'center',
         headerTitle: () => (
-          <View style={{ maxWidth: '90%', flex: 1, alignItems: 'center' }}>
-            <TextTicker
-              style={{
-                fontSize: isTablet ? 24 : 20,
-                fontFamily: 'Rubik_400Regular',
-                textAlign: 'center',
-              }}
-              duration={10000}
-              loop
-              bounce
-              repeatSpacer={50}
-              marqueeDelay={1000}>
-              {title}
-            </TextTicker>
-          </View>
+          <TextTicker
+            style={{
+              fontSize: isTablet ? 24 : 20,
+              fontFamily: 'Rubik_400Regular',
+              textAlign: 'center',
+            }}
+            duration={10000}
+            loop
+            bounce
+            repeatSpacer={50}
+            marqueeDelay={1000}>
+            {title}
+          </TextTicker>
         ),
         headerLeft: showBackBtn
           ? () => (
