@@ -37,7 +37,7 @@ export const Link = ({ href, img, name, style }: LinkProps) => {
         <View
           style={[
             { flexDirection: 'row', gap: 10, alignItems: 'center' },
-            isTablet ? { width: img ? 600 : '98%' } : { width: img ? 270 : '98%' },
+            isTablet ? { width: img ? 600 : '95%' } : { width: img ? 270 : '95%' },
           ]}>
           {img && <Image source={img} style={{ width: 32, height: 32, marginLeft: 5 }} />}
           <UIText style={[{ textAlign: 'left', color: '#1f2937' }]}>{name}</UIText>
