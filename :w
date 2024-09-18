@@ -1,4 +1,4 @@
-import { useGlobalSearchParams } from 'expo-router';
+import { useGlobalSearchParams, useLocalSearchParams } from 'expo-router';
 import { Trans, useTranslation } from 'react-i18next';
 import { ScrollView } from 'react-native';
 import { Zero, One, Two, Container } from '~/components/P';
@@ -7,10 +7,11 @@ import { StackScreen } from '~/components/StackScreen';
 export default function TimeLink() {
   const { t } = useTranslation();
   const params = useGlobalSearchParams();
+  console.log(params);
 
   return (
     <>
-      <StackScreen title={t(params.id + '.link')} />
+      <StackScreen title={''} />
       <ScrollView
         contentContainerStyle={{
           paddingHorizontal: 5,
@@ -20,20 +21,7 @@ export default function TimeLink() {
           flexGrow: 1,
         }}>
         <Container>
-          <Trans
-            i18nKey={params.id + '.content'}
-            components={{
-              zero: <Zero></Zero>,
-              one: <One style={{ color: '#111827' }}></One>,
-              two: <Two></Two>,
-              i: (
-                <One
-                  style={{
-                    fontStyle: 'italic',
-                  }}></One>
-              ),
-            }}
-          />
+          <Zero>{params.lvl2[0].name}</Zero>
         </Container>
       </ScrollView>
     </>
