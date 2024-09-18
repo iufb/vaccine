@@ -10,7 +10,6 @@ export default function Rules() {
       <StackScreen title={t('info.rules.title')} />
       <ScrollView
         contentContainerStyle={{
-          paddingHorizontal: 5,
           paddingVertical: 10,
           backgroundColor: 'white',
         }}>

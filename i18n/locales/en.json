@@ -134,7 +134,7 @@
       },
       {
         "href": "/info/time",
-        "name": "The timing of mandatory preventive vaccinations within the framework of the guaranteed volume of medical care"
+        "name": "Vaccination calendar"
       },
       {
         "href": "/info/test",
@@ -207,14 +207,14 @@
         "content": "<one>\n1) Previously unvaccinated children aged:</one><two>\n - from 7 to 11 months of age receive two doses one month apart, the third dose is administered in the second year of life at least 2 months after the second dose;</two><two>\n - from 12 to 23 months of age receive two doses two months apart, the third dose is not administered;</two><two>\n - from 2 to 5 years of age receive one dose;</two><two>\n - from 12 to 23 months of age receive two doses two months apart, the third dose is not administered;</two><two>\n - from 2 to 5 years of age receive one dose.</two><one>\n2) Previously immunized children with a single dose:</one><two>\n - from 7 to 11 months of age receive the next two doses at two-month intervals, the third dose is administered until 15 months of life;</two><two>\n - from 12 to 23 months of age, if vaccinated before age 1 year, receive two doses two months apart, if vaccinated over age 1 year, receive 1 dose;</two><two>\n - from 2 to 5 years of age, if the previous dose was administered before the age of 2 years, one dose at two-month intervals; if the previous dose was administered after the age of 2 years, no additional doses are required;</two><one>\n3) Previously immunized children who have had two doses:</one><two>\n - From 12 to 23 months of age, if previous doses are received before age 1 year, a third dose is administered two months apart after the second dose;</two><two>\n - From 12 to 23 months of age, no additional doses are required if prior doses are received over 1 year of age;</two><two>\n - From 2 to 5 years of age, if the previous doses were administered before the age of 2 years, one dose is administered two months apart; if the previous doses were administered after the age of 2 years, no additional doses are required.</two>"
       },
       "link2": {
-        "link": "\t\tII. Persons who did not vaccinated against HBV are vaccinated according to the following scheme:",
+        "link": "\t\t Persons who did not vaccinated against HBV are vaccinated according to the following scheme:",
         "content": "<one>\n1) Children under 6 years of age not immunized at birth - 0-2-4 with intervals between vaccinations - two months. If children under 6 years of age are not immunized against HBV at birth, it is allowed to complete the course of vaccination against this infection with HBV monovaccine;</one><one>\n2) Previously unvaccinated children over 6 years of age and adults - 0-1-6 with intervals between the first and second vaccinations - one month, between the second and third - five months;</one><one>\n3) HBV vaccination of persons over 15 years of age is carried out after preliminary marker diagnostics for HBV. Persons with a positive result of HBV testing are not allowed for vaccination.</one>"
       },
       "link3": {
-        "link": "\t\tIII. Vaccination against diphtheria, tetanus, and pertussis is carried out using vaccines containing DTP or DTaP.",
-        "content": "<zero>\t\tIV. Previously unvaccinated children:</zero><two>\n1) From 4 to 7 years old, children are vaccinated with combination vaccines containing DTP with diphtheria anatoxin according to the following schedule: 3 vaccinations at a 2-month interval, and the fourth vaccination at 6-12 months;</two><two>\n2) From the age of 7 and older, adults are vaccinated according to the following schedule: two vaccinations of DTP with reduced diphtheria anatoxin content at a 1-month interval, and the third vaccination at 6-12 months.</two><zero>\t\tCombination vaccines containing diphtheria anatoxin are used in children up to 7 years old, vaccines with reduced diphtheria anatoxin content are used in children from 4 years old, and ADS-M is used in children from 7 years old and adults.</zero><zero>\t\tV. In case of contraindications to the pertussis component, vaccination is carried out using ADS-M for children older than 7 years:</zero><one>\n1) If a reaction occurs after the first vaccination with a DTP-containing vaccine, the second vaccination is administered with ADS-M no earlier than 3 months later;</one><one>\n2) If a reaction occurs after the second vaccination with a DTP-containing vaccine, the course of vaccination against diphtheria and tetanus is considered complete. In both cases, the first revaccination with ADS-M is carried out after 12 months;</one><one>\n3) If a reaction occurs after the third vaccination with a DTP-containing vaccine, the first revaccination with ADS-M is carried out after 12-18 months.</one><zero>\t\tVI. If a child misses the second dose of a DTP-containing vaccine, the vaccination course continues with alternating types of DTP-containing vaccines according to the schedule approved by Resolution No. 612.</zero><zero>\t\tVII. When completing the primary vaccination series with DTP-containing vaccines late, the first revaccination is performed with an interval of no less than one year.</zero><zero>\t\tVIII. Combined vaccines containing DTP with an increased content of diphtheria anatoxin are not used in children older than 7 years.</zero>"
+        "link": "\t\t Vaccination against diphtheria, tetanus, and pertussis is carried out using vaccines containing DTP or DTaP.",
+        "content": "<zero>\t\t Previously unvaccinated children:</zero><two>\n1) From 4 to 7 years old, children are vaccinated with combination vaccines containing DTP with diphtheria anatoxin according to the following schedule: 3 vaccinations at a 2-month interval, and the fourth vaccination at 6-12 months;</two><two>\n2) From the age of 7 and older, adults are vaccinated according to the following schedule: two vaccinations of DTP with reduced diphtheria anatoxin content at a 1-month interval, and the third vaccination at 6-12 months.</two><zero>\t\tCombination vaccines containing diphtheria anatoxin are used in children up to 7 years old, vaccines with reduced diphtheria anatoxin content are used in children from 4 years old, and ADS-M is used in children from 7 years old and adults.</zero><zero>\t\t In case of contraindications to the pertussis component, vaccination is carried out using ADS-M for children older than 7 years:</zero><one>\n1) If a reaction occurs after the first vaccination with a DTP-containing vaccine, the second vaccination is administered with ADS-M no earlier than 3 months later;</one><one>\n2) If a reaction occurs after the second vaccination with a DTP-containing vaccine, the course of vaccination against diphtheria and tetanus is considered complete. In both cases, the first revaccination with ADS-M is carried out after 12 months;</one><one>\n3) If a reaction occurs after the third vaccination with a DTP-containing vaccine, the first revaccination with ADS-M is carried out after 12-18 months.</one><zero>\t\t If a child misses the second dose of a DTP-containing vaccine, the vaccination course continues with alternating types of DTP-containing vaccines according to the schedule approved by Resolution No. 612.</zero><zero>\t\t When completing the primary vaccination series with DTP-containing vaccines late, the first revaccination is performed with an interval of no less than one year.</zero><zero>\t\t Combined vaccines containing DTP with an increased content of diphtheria anatoxin are not used in children older than 7 years.</zero>"
       },
-      "data": "<container><zero>\t\tI. During catch-up vaccination against pneumococcal infection, an interval of no less than 1 month is observed between the first and second doses, and no less than 2 months between the second and third doses.</zero><link1></link1><link2></link2><link3></link3><zero>\t\tIX. Children who did not receive tuberculosis vaccination at birth (1-4 days of life) are vaccinated in healthcare organizations providing outpatient care at the place of residence: up to 2 months of age without Mantoux test, at the age of 2 months and older - after Mantoux test with a negative result. Children who have not been vaccinated against tuberculosis at birth are vaccinated against this infection before the age of 15. The interval between the Mantoux test and vaccination with the BCG vaccine should be at least three days and no more than two weeks. Before performing the Mantoux test, an interval of 2 months is observed from other vaccinations.</zero><zero>\t\tX. Girls under the age of 15 who have missed the scheduled preventive vaccination against human papillomavirus at the age of 11 are vaccinated according to the schedule in accordance with the instructions for medical use of the vaccine and the resolution of the Chief State Sanitary Doctor of the Republic of Kazakhstan. Vaccination is carried out at vaccination points of educational institutions and healthcare organizations providing outpatient care at the place of residence.</zero><zero>\t\tXI. To determine high-risk groups in the population for vaccine-preventable infections and in the presence of diagnostic preparations, the intensity of immunity to vaccine-preventable infections is studied.</zero><zero>\t\tXII. When identifying non-immune individuals (those with a negative test result and a low titer of antibodies to determine immunity) to measles, rubella, mumps, poliomyelitis, diphtheria, tetanus, and pertussis, they undergo additional single vaccination.</zero></container>"
+      "data": "<container><zero>\t\tDuring catch-up vaccination against pneumococcal infection, an interval of no less than 1 month is observed between the first and second doses, and no less than 2 months between the second and third doses.</zero><link1></link1><link2></link2><link3></link3><zero>\t\t Children who did not receive tuberculosis vaccination at birth (1-4 days of life) are vaccinated in healthcare organizations providing outpatient care at the place of residence: up to 2 months of age without Mantoux test, at the age of 2 months and older - after Mantoux test with a negative result. Children who have not been vaccinated against tuberculosis at birth are vaccinated against this infection before the age of 15. The interval between the Mantoux test and vaccination with the BCG vaccine should be at least three days and no more than two weeks. Before performing the Mantoux test, an interval of 2 months is observed from other vaccinations.</zero><zero>\t\tGirls under the age of 15 who have missed the scheduled preventive vaccination against human papillomavirus at the age of 11 are vaccinated according to the schedule in accordance with the instructions for medical use of the vaccine and the resolution of the Chief State Sanitary Doctor of the Republic of Kazakhstan. Vaccination is carried out at vaccination points of educational institutions and healthcare organizations providing outpatient care at the place of residence.</zero><zero>\t\t To determine high-risk groups in the population for vaccine-preventable infections and in the presence of diagnostic preparations, the intensity of immunity to vaccine-preventable infections is studied.</zero><zero>\t\t When identifying non-immune individuals (those with a negative test result and a low titer of antibodies to determine immunity) to measles, rubella, mumps, poliomyelitis, diphtheria, tetanus, and pertussis, they undergo additional single vaccination.</zero></container>"
     },
     "contraindications": {
       "title": "Medical contraindications to preventive vaccinations",
@@ -267,8 +267,8 @@
     "time": {
       "title": "The timing of mandatory preventive vaccinations within the framework of the guaranteed volume of medical care",
       "tabs": [
-        "Национальный",
-        "Эпидемиологический "
+        "National",
+        "Epidemiological"
       ],
       "nacLinks": [
         {
@@ -506,7 +506,7 @@
       ],
       "epidLinks": [
         {
-          "lvl1": "Individuals at risk due to the nature of their professional activities, including: healthcare workers:",
+          "lvl1": "Individuals at risk due to the nature of their professional activities, including: healthcare workers",
           "lvl2": [
             {
               "name": "Viral hepatitis B",
@@ -519,7 +519,7 @@
           ]
         },
         {
-          "lvl1": "Individuals who have suffered injuries or wounds with a breach of skin and mucous membrane integrity:",
+          "lvl1": "Individuals who have suffered injuries or wounds with a breach of skin and mucous membrane integrity",
           "lvl2": [
             {
               "name": "Diphtheria",
@@ -532,7 +532,7 @@
           ]
         },
         {
-          "lvl1": "Children under dynamic observation in a medical organization:",
+          "lvl1": "Children under dynamic observation in a medical organization",
           "lvl2": [
             {
               "name": "Influenza",
@@ -541,7 +541,7 @@
           ]
         },
         {
-          "lvl1": "Individuals who have received a blood transfusion:",
+          "lvl1": "Individuals who have received a blood transfusion",
           "lvl2": [
             {
               "name": "Viral hepatitis B",
@@ -550,7 +550,7 @@
           ]
         },
         {
-          "lvl1": "Orphans and children left without parental care, studying and/or being raised in educational organizations for orphans and children left without parental care, individuals in medical and social institutions for the elderly, individuals with disabilities:",
+          "lvl1": "Orphans and children left without parental care, studying and/or being raised in educational organizations for orphans and children left without parental care, individuals in medical and social institutions for the elderly, individuals with disabilities",
           "lvl2": [
             {
               "name": "Influenza",
@@ -559,7 +559,7 @@
           ]
         },
         {
-          "lvl1": "Based on epidemiological indications:",
+          "lvl1": "Based on epidemiological indications",
           "lvl2": [
             {
               "name": "Coronavirus infection",
@@ -584,7 +584,7 @@
           ]
         },
         {
-          "lvl1": "Population residing and working in natural foci of infectious diseases:",
+          "lvl1": "Population residing and working in natural foci of infectious diseases",
           "lvl2": [
             {
               "name": "Tularemia",
@@ -601,7 +601,7 @@
           ]
         },
         {
-          "lvl1": "Individuals at risk due to the nature of their professional activities, including: workers in sewage and treatment facilities:",
+          "lvl1": "Individuals at risk due to the nature of their professional activities, including: workers in sewage and treatment facilities",
           "lvl2": [
             {
               "name": "Typhoid fever",
@@ -610,7 +610,7 @@
           ]
         },
         {
-          "lvl1": "Employees of research organizations, laboratories, including personnel involved in sample collection, vivariums, organizations and institutions conducting research on the presence of rabies agent and working with animals:",
+          "lvl1": "Employees of research organizations, laboratories, including personnel involved in sample collection, vivariums, organizations and institutions conducting research on the presence of rabies agent and working with animals",
           "lvl2": [
             {
               "name": "Rabies",
@@ -619,7 +619,7 @@
           ]
         },
         {
-          "lvl1": "Individuals performing work on catching and keeping stray animals:",
+          "lvl1": "Individuals performing work on catching and keeping stray animals",
           "lvl2": [
             {
               "name": "Rabies",
@@ -628,7 +628,7 @@
           ]
         },
         {
-          "lvl1": "Employees of hunting and forestry organizations, gamekeepers, workers in slaughterhouses (sites), taxidermists, dog handlers:",
+          "lvl1": "Employees of hunting and forestry organizations, gamekeepers, workers in slaughterhouses (sites), taxidermists, dog handlers",
           "lvl2": [
             {
               "name": "Rabies",
@@ -637,7 +637,7 @@
           ]
         },
         {
-          "lvl1": "Healthcare organization employees involved in conducting parenteral interventions on rabies patients, and pathologists:",
+          "lvl1": "Healthcare organization employees involved in conducting parenteral interventions on rabies patients, and pathologists",
           "lvl2": [
             {
               "name": "Rabies",
@@ -646,7 +646,7 @@
           ]
         },
         {
-          "lvl1": "Individuals bitten or scratched by any animals:",
+          "lvl1": "Individuals bitten or scratched by any animals",
           "lvl2": [
             {
               "name": "Rabies",

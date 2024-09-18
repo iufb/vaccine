@@ -5,6 +5,7 @@ import { ScrollView, View, TouchableOpacity } from 'react-native';
 import { Link } from '~/components/Link';
 import { Container, One, Two, UIText, Zero } from '~/components/P';
 import { StackScreen } from '~/components/StackScreen';
+import { isTablet } from '~/components/constants';
 const links = {
   link1: 'info.time.link1',
   link2: 'info.time.link2',
@@ -72,7 +73,7 @@ export default function Time() {
                 ]}>
                 <UIText
                   style={[
-                    { textAlign: 'center', fontSize: 15 },
+                    { textAlign: 'center', fontSize: isTablet ? 20 : 15 },
                     tab.val == selectedTab ? { fontWeight: 900 } : { fontWeight: 400 },
                   ]}>
                   {tab.label}
