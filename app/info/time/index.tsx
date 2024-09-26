@@ -10,20 +10,7 @@ const links = {
   link1: 'info.time.link1',
   link2: 'info.time.link2',
 };
-const getLinks = () => {
-  const { t } = useTranslation();
-  const linksObject: Record<string, JSX.Element> = {};
-  Object.keys(links).forEach((l, idx) => {
-    const link = links[l as keyof typeof links];
-    linksObject[`link${idx + 1}`] = (
-      <Link
-        style={{ borderBottomColor: 'gray', borderBottomWidth: 1, marginBottom: 10 }}
-        href={`/info/time/link/${link}` as Href<string>}
-        name={t(`${link}.link`)}></Link>
-    );
-  });
-  return linksObject;
-};
+
 interface Link {
   lvl1: string;
   lvl2: {
@@ -84,7 +71,7 @@ export default function Time() {
         <Container>
           {(selectedTab == 'nac' ? nacLinks : epidLinks).map((link) => (
             <Link
-              style={{ borderBottomColor: 'gray', borderBottomWidth: 1, paddingBottom: 15 }}
+              style={{ borderBottomColor: '#94a3b8', borderBottomWidth: 1, paddingBottom: 15 }}
               key={link.lvl1}
               href={{
                 pathname: `/info/time/link` as any,
