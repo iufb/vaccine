@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Text, TouchableOpacity, View } from 'react-native';
 import * as Device from 'expo-device';
 import { UIText } from '~/components/P';
-import { isTablet } from '~/components/constants';
+import { getDimenstions, isTablet } from '~/components/constants';
 const Question = () => {};
 
 const Answer = () => {};
@@ -19,7 +19,12 @@ const RadioButton = ({
   return (
     <TouchableOpacity
       onPress={() => onPress(label)}
-      style={{ flexDirection: 'row', alignItems: 'center', marginBottom: 10 }}>
+      style={{
+        flexDirection: 'row',
+        alignItems: 'center',
+        marginBottom: 10,
+        maxWidth: 300,
+      }}>
       <View
         style={{
           height: 24,
@@ -44,8 +49,11 @@ const RadioButton = ({
       </View>
       <UIText
         style={[
-          selected && { fontFamily: 'Rubik_600SemiBold', marginBottom: 3 },
-          { maxWidth: isTablet ? 600 : 335 },
+          selected && {
+            fontFamily: 'Rubik_600SemiBold',
+            marginBottom: 3,
+            maxWidth: getDimenstions().width - 110,
+          },
         ]}>
         {label}
       </UIText>

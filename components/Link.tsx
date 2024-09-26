@@ -10,7 +10,7 @@ import {
   ViewStyle,
 } from 'react-native';
 import { UIText } from '~/components/P';
-import { isTablet } from '~/components/constants';
+import { getDimenstions, isTablet } from '~/components/constants';
 interface LinkProps {
   href: Href<string>;
   name: string;
@@ -40,7 +40,12 @@ export const Link = ({ href, img, name, style }: LinkProps) => {
             isTablet ? { width: img ? 600 : '95%' } : { width: img ? 270 : '95%' },
           ]}>
           {img && <Image source={img} style={{ width: 32, height: 32, marginLeft: 5 }} />}
-          <UIText style={[{ textAlign: 'left', color: '#1f2937' }]}>{name}</UIText>
+          <UIText
+            style={[
+              { textAlign: 'left', color: '#1f2937', maxWidth: getDimenstions().width - 150 },
+            ]}>
+            {name}
+          </UIText>
         </View>
         <FontAwesome name="chevron-right" size={20} color={'gray'} />
       </View>
