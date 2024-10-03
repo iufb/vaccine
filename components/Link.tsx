@@ -42,7 +42,7 @@ export const Link = ({ href, img, name, style }: LinkProps) => {
           {img && <Image source={img} style={{ width: 32, height: 32, marginLeft: 5 }} />}
           <UIText
             style={[
-              { textAlign: 'left', color: '#1f2937', maxWidth: getDimenstions().width - 150 },
+              { textAlign: 'left', color: '#1f2937', maxWidth: getDimenstions().width - 100 },
             ]}>
             {name}
           </UIText>

@@ -24,7 +24,7 @@ export default function ConLink() {
             i18nKey={params.id + '.content'}
             components={{
               zero: <Zero></Zero>,
-              one: <One style={{ color: '#111827' }}></One>,
+              one: <One style={{ color: '#111827', fontFamily: 'Rubik_400Regular' }}></One>,
               two: <Two></Two>,
               i: (
                 <One
