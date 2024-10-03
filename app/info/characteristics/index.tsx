@@ -24,7 +24,7 @@ export default function Characteristics() {
             style={{ borderRadius: 10 }}
             name={link}
             href={`/info/deseases/${link}` as Href<string>}
-            img={require('../../../assets/virus-3.png')}
+            img={require('../../../assets/11.png')}
           />
         ))}
       </ScrollView>
