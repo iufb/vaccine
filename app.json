@@ -1,51 +1,42 @@
 {
-    "expo": {
-        "name": "Вакцинация в Казахстане",
-        "slug": "vac-said",
-        "version": "1.0.0",
-        "scheme": "vac-said",
-        "web": {
-            "bundler": "metro",
-            "output": "static",
-            "favicon": "./assets/favicon.png"
-        },
-        "plugins": [
-            "expo-router",
-            "expo-font",
-            "expo-localization"
-        ],
-        "experiments": {
-            "typedRoutes": true,
-            "tsconfigPaths": true
-        },
-        "orientation": "default",
-        "icon": "./assets/adaptive-icon.png",
-        "userInterfaceStyle": "light",
-        "splash": {
-            "image": "./assets/splash-icon-light.png",
-            "resizeMode": "contain",
-            "backgroundColor": "#ffffff"
-        },
-        "assetBundlePatterns": [
-            "**/*"
-        ],
-        "ios": {
-            "supportsTablet": true
-        },
-        "android": {
-            "adaptiveIcon": {
-                "foregroundImage": "./assets/adaptive-icon.png",
-                "backgroundColor": "#ffffff"
-            },
-            "package": "com.saidual.vacappkz"
-        },
-        "extra": {
-            "router": {
-                "origin": false
-            },
-            "eas": {
-                "projectId": "beac157c-c2dd-41a8-8b9c-5b839dcfeea9"
-            }
-        }
+  "expo": {
+    "name": "Прививки в Казахстане",
+    "slug": "vac-das",
+    "version": "1.0.0",
+    "scheme": "vac-das",
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": ["expo-router", "expo-font", "expo-localization"],
+    "experiments": {
+      "typedRoutes": true,
+      "tsconfigPaths": true
+    },
+    "orientation": "default",
+    "icon": "./assets/adaptive-icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash-icon-light.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.das.tancav"
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      }
     }
+  }
 }
