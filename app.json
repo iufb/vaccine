@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Прививки в Казахстане",
-    "slug": "vac-das",
+    "name": "Гид по Вакцинации в Казахстане",
+    "slug": "gid-vac",
     "version": "1.0.0",
     "scheme": "vac-das",
     "web": {
@@ -37,14 +37,14 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.das.tancav"
+      "package": "com.gid.vacrk"
     },
     "extra": {
       "router": {
         "origin": false
       },
       "eas": {
-        "projectId": "57389e4d-19c0-4b79-88a9-3ee783d78d83"
+        "projectId": "1b0364cb-57ab-491f-b6b6-aacc2294c707"
       }
     }
   }
