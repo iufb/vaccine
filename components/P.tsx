@@ -22,9 +22,9 @@ const UIText = ({ children, style }: BaseProps) => {
             style={[
                 {
                     fontFamily: 'Rubik_400Regular',
-                    fontSize: rMS(16),
+                    fontSize: rMS(15),
                     color: '#111827',
-                    lineHeight: rMS(24),
+                    lineHeight: rMS(22),
                 },
                 ...(Array.isArray(style) ? style : [style]),
             ]}>
@@ -43,7 +43,7 @@ const One = ({ children, style }: BaseProps) => (
                 paddingLeft: rS(15),
                 fontWeight: 600,
                 fontFamily: 'Rubik_600SemiBold',
-                color: '#450a0a',
+                color: '#ef4444',
             },
             style,
         ]}>
