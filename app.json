@@ -1,7 +1,7 @@
 {
     "expo": {
         "name": "Гид по Вакцинации в Казахстане",
-        "slug": "gid-vac",
+        "slug": "vaccine-vq",
         "version": "1.0.0",
         "scheme": "vac-das",
         "web": {
